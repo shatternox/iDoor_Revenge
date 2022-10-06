@@ -3,9 +3,9 @@ services:
     www:
         build: .
         ports: 
-            - "8001:80"
+            - "55124:80"
         volumes:
-            - ./www:/var/www/html/
+            - ./web:/var/www/html/
         links:
             - db
         networks:
@@ -16,25 +16,15 @@ services:
             - "3306:3306"
         command: --default-authentication-plugin=mysql_native_password
         environment:
-            MYSQL_DATABASE: ctf_beefest
-            MYSQL_USER: tetek
-            MYSQL_PASSWORD: 5E^FVZjKu4&te!Ed8p8
-            MYSQL_ROOT_PASSWORD: 5E^FVZjKu4&te!Ed8p8
+            MYSQL_DATABASE: idoor
+            MYSQL_USER: shtnx
+            MYSQL_PASSWORD: 6^Si2OtDU2f8zD2H1Zd7&a
+            MYSQL_ROOT_PASSWORD: 6^Si2OtDU2f8zD2H1Zd7&a
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - ./conf:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
         networks:
             - default
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        links: 
-            - db:db
-        ports:
-            - 8000:80
-        environment:
-            MYSQL_USER: root
-            MYSQL_PASSWORD: 5E^FVZjKu4&te!Ed8p8
-            MYSQL_ROOT_PASSWORD: 5E^FVZjKu4&te!Ed8p8
 volumes:
     persistent:
