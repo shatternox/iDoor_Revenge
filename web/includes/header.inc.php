@@ -1,5 +1,7 @@
 <?php
+
     session_start();
+    error_reporting(0);
     require "./db/db.php";
     if(!isset($_SESSION['username'])){
         header("Location: ../login.php");
@@ -33,7 +35,7 @@
                     <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../order_history.php">Add Custom Image<span class="sr-only"></span></a>
+                    <a class="nav-link" href="../custom_image.php">Add Custom Image<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../order_history.php">Order History <span class="sr-only"></span></a>
