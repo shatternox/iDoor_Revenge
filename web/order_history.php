@@ -22,18 +22,26 @@
 
 <?php
 $q = "SELECT * FROM order_history WHERE username = ?";
-$theParam = $_SESSION['username'];
-
-if (isset($_POST['order_id'])) {
-    $q = "SELECT * FROM order_history WHERE order_id = ?";
-    $theParam = $_POST['order_id'];
-}
+$username = $_SESSION['username'];
 
 $stmt = $conn->prepare($q);
-$stmt->bind_param("s", $theParam);
+$stmt->bind_param("s", $username);
 $stmt->execute();
 
 $result = $stmt->get_result();
+
+if (isset($_POST['order_id'])) {
+    $q = "SELECT * FROM order_history WHERE order_id = ? and username = ?";
+    $theParam = $_POST['order_id'];
+
+    $stmt = $conn->prepare($q);
+    $stmt->bind_param("ss", $theParam, $username);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+}
+
+
 
 
 if ($result->num_rows < 1) {

@@ -33,9 +33,13 @@
                     <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../order_history.php">Add Custom Image<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="../order_history.php">Order History <span class="sr-only"></span></a>
                 </li>
             </ul>
+            <button type="submit" class="btn btn-info" style="margin: 0px 20px;">Current Time: <?= time() ?></button>
             <button type="submit" class="btn btn-danger" style="margin: 0px 20px;"><a href="../controller/logoutController.php" style="text-decoration: none; color: white;">Logout</a></button>
             <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
