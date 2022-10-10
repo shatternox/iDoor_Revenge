@@ -1,7 +1,7 @@
 <?php
-$dbhost = "localhost";
+$dbhost = "db";
 $dbuser = "root";
-$dbpass = "";
+$dbpass = "6^Si2OtDU2f8zD2H1Zd7&a";
 $dbname = "idoor";
 
 // Create connection

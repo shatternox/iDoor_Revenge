@@ -27,7 +27,7 @@
     
     <h1>Input your Custom Image</h1>
     <br>
-    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="custom_image" placeholder="https://fokusgame.com/sites/default/files/styles/flexslider_full/public/slideshow/2020-12/2020-12-17%20%289%29.png">
+    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="custom_image" placeholder="https://media.tenor.com/WjIF7fZJCVUAAAAd/begitu-sulit.gif">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     <br>
     
@@ -36,7 +36,7 @@
             include $_POST['custom_image'];
         } else {
             ?>
-            <img src="https://fokusgame.com/sites/default/files/styles/flexslider_full/public/slideshow/2020-12/2020-12-17%20%289%29.png" alt="">
+            <img src="https://media.tenor.com/WjIF7fZJCVUAAAAd/begitu-sulit.gif" alt="">
             <?php
         }
     ?>

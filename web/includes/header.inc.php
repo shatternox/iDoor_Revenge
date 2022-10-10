@@ -2,10 +2,10 @@
 
     session_start();
     error_reporting(0);
-    require "./db/db.php";
     if(!isset($_SESSION['username'])){
         header("Location: ../login.php");
     }
+    require "./db/db.php";
 ?>
 
 <!DOCTYPE html>

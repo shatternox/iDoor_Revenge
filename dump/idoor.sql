@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2022 at 07:12 PM
+-- Generation Time: Oct 06, 2022 at 05:41 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -58,8 +58,13 @@ INSERT INTO `doors` (`door_id`, `door_name`, `door_desc`, `door_price`) VALUES
 CREATE TABLE `order_history` (
   `order_id` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `item_purchased` varchar(255) NOT NULL
+  `item_purchased` varchar(255) NOT NULL,
+  `item_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_history`
+--
 
 -- --------------------------------------------------------
 
@@ -116,7 +121,7 @@ ALTER TABLE `doors`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

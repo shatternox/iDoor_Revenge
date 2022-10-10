@@ -3,10 +3,11 @@ services:
     www:
         build: .
         ports: 
-            - "55124:80"
+            - "55127:80"
         volumes:
-            - ./web:/var/www/html/
-            - ./flag:/flag_341512514123213213
+            - ./web:/var/www/html/:ro
+            - ./flag:/flag_341512514123213213:ro
+            - ./config/php.ini:/usr/local/etc/php/conf.d/local.ini:ro
         links:
             - db
         networks:
