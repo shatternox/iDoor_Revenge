@@ -15,7 +15,7 @@
 
 <form action="order_history.php" method="POST" class="search-form">
 
-    <input type="text" name="order_id" id="order_id">
+    <input type="text" name="order_id" id="order_id" placeholder="Order Id">
     <button type="submit" class="btn btn-success">Search</button>
 
 </form>
